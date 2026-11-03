@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prendre rendez-vous - Salon Lambert</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="salon-nom"></h1>
+    <p id="salon-metier"></p>
+  </header>
+
+  <main>
+    <p id="message" hidden></p>
+
+    <section id="compte">
+      <h2>Votre compte</h2>
+      <p id="sans-compte">Pour réserver, connectez-vous ou créez un compte.</p>
+      <form id="form-compte">
+        <p>
+          <label for="email">Adresse e-mail</label><br>
+          <input id="email" name="email" type="email" autocomplete="username">
+        </p>
+        <p>
+          <label for="mot-de-passe">Mot de passe</label><br>
+          <input id="mot-de-passe" name="mot-de-passe" type="password" autocomplete="current-password">
+        </p>
+        <p>
+          <button type="submit">Se connecter</button>
+          <button type="button" id="creer-compte">Créer un compte</button>
+        </p>
+      </form>
+      <p id="connecte" hidden>
+        <span id="connecte-email"></span>
+        <button type="button" id="deconnecter">Se déconnecter</button>
+      </p>
+    </section>
+
+    <section id="choix">
+      <h2>Prendre rendez-vous</h2>
+      <p>Choisissez un créneau d'une heure, du mardi au samedi.</p>
+      <div id="jours"></div>
+    </section>
+
+    <section id="formulaire" hidden>
+      <h2>Votre rendez-vous</h2>
+      <p>Créneau choisi : <span id="creneau-choisi"></span></p>
+      <form id="form-reservation">
+        <p>
+          <label for="nom">Nom</label><br>
+          <input id="nom" name="nom" autocomplete="name">
+        </p>
+        <p>
+          <label for="telephone">Téléphone</label><br>
+          <input id="telephone" name="telephone" type="tel" autocomplete="tel">
+        </p>
+        <p>
+          <label for="motif">Motif</label><br>
+          <select id="motif" name="motif"></select>
+        </p>
+        <p>
+          <label for="precision">Précisions (facultatif)</label><br>
+          <textarea id="precision" name="precision" rows="3"></textarea>
+        </p>
+        <p>
+          <button type="submit">Réserver</button>
+          <button type="button" id="changer">Changer de créneau</button>
+        </p>
+      </form>
+    </section>
+
+    <section id="mes-rdv" hidden>
+      <h2>Mes rendez-vous</h2>
+      <ul id="liste-mes-rdv"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Créneau, la prise de rendez-vous du Salon Lambert.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js"></script>
+  <script src="reglages.js"></script>
+  <script src="logique.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
