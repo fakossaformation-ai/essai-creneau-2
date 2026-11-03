@@ -3,6 +3,6 @@
 // données, pas le secret de cette clé.
 
 const REGLAGES = {
-  adresse: "", // par exemple "https://abcdefghijklmnop.supabase.co"
-  clePublique: "", // la clé publique du projet (« publishable » ou « anon »)
+  adresse: "https://nipllgbjonndxurvvgdh.supabase.co", // par exemple "https://abcdefghijklmnop.supabase.co"
+  clePublique: "sb_publishable_G88xRonnQFTgsPq4-p4VlQ_XTzBSg8-", // la clé publique du projet (« publishable » ou « anon »)
 };
